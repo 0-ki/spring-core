@@ -1,0 +1,13 @@
+- IntelliJ 단축키
+    ㅇ Ctrl + Alt + V : new Member(1L, "member A", Grade.VIP); 에서 변수타입/변수명 자동으로 완성
+    ㅇ Ctrl + Alt + M : Extract Method - 리팩토링 시, 메서드로 추출해 준다.
+    ㅇ Alt + Insert   : Generate ... ( Constructor , Getter & Setter 등 )
+    ㅇ F2             : 현재 파일에서 문제 있는 부분의 앞 쪽으로 커서를 이동해 준다.
+    ㅇ Ctrl + Shift + Enter : ; 세미콜론을 붙여서 엔터한 효과
+    ㅇ soutv          : 상단의 변수를 출력하는 Sysout을 생성한다.
+
+- Annotaion과 Spring 기능
+    ㅇ @Test         : JUnit5 프레임워크의 테스트 메서드로 지정
+    ㅇ @Configuration : springframework의 Annotaion. 구성(설정) class로 등록
+    ㅇ ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class); // @Configuration으로 지정한 클래스를 Bean으로 컨테이너에 등록
+    ㅇ
