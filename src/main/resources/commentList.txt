@@ -5,9 +5,17 @@
     ㅇ F2             : 현재 파일에서 문제 있는 부분의 앞 쪽으로 커서를 이동해 준다.
     ㅇ Ctrl + Shift + Enter : ; 세미콜론을 붙여서 엔터한 효과
     ㅇ soutv          : 상단의 변수를 출력하는 Sysout을 생성한다.
+    ㅇ iter           : 상단에서 반복 가능한 변수등의 구조를 찾아 for문을 만들어 준다.
+
 
 - Annotaion과 Spring 기능
     ㅇ @Test         : JUnit5 프레임워크의 테스트 메서드로 지정
     ㅇ @Configuration : springframework의 Annotaion. 구성(설정) class로 등록
     ㅇ ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class); // @Configuration으로 지정한 클래스를 Bean으로 컨테이너에 등록
+    ㅇ
+
+
+
+- Bean 관련 지식
+    ㅇ Spring Bean 조회시, 부모를 조회하면 자식까지 모두 조회된다. (모든 Java는 Object를 상속한다)
     ㅇ
