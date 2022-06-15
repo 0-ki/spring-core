@@ -10,12 +10,17 @@
 
 - Annotaion과 Spring 기능
     ㅇ @Test         : JUnit5 프레임워크의 테스트 메서드로 지정
-    ㅇ @Configuration : springframework의 Annotaion. 구성(설정) class로 등록
+    ㅇ @Configuration : springframework의 Annotaion. 구성(설정) class로 등록. @Bean을 수동 등록 하는 경우 사용
     ㅇ ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class); // @Configuration으로 지정한 클래스를 Bean으로 컨테이너에 등록
-    ㅇ
-
+    ㅇ  @ComponentScan: 해당 패키지를 포함한 하위의 클래스에서 bean 대상을 조회 ->
+        @Component: Spring이 해당 클래스 인스턴스 생성하여 컨테이너에 등록 ->
+        @Autowired: 기본적으로 Type 일치 Bean을 주입한다
+        @Bean: Method에만 적용 가능하며, 해당 메서드에서 생성된 인스턴스를 (필요시 프로퍼티를 변경 등의 작업 후) 컨테이너에 등록
+    ㅇ @SpringBootApplication에 @ComponentScan이 포함되어 있다.
 
 
 - Bean 관련 지식
-    ㅇ Spring Bean 조회시, 부모를 조회하면 자식까지 모두 조회된다. (모든 Java는 Object를 상속한다)
+    ㅇ Spring Bean 조회시 범위 : (Bean bean.getBeanDefinitions() ) 부모를 조회하면 자식까지 모두 조회된다. (모든 Java는 Object를 상속하므로 Object로 전체 조회 가능)
+    ㅇ @ComponentScan 자동 Vs @Bean 수동 중복 등록시 : @ComponentScan에 의해 @Component로 등록한 bean과, @Bean이 적용된 메서드로 수동 등록시 수동이 Override로 적용 되지만,
+        SpringBootApp 실행 시에는 충돌이 기본값
     ㅇ
