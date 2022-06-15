@@ -15,6 +15,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    // Q. memberRepository() 가 2번 호출된다. Bean으로 2번 등록 되는가?
+    // A.   Spring이 싱글톤을 보장해준다!! ->
+    //      @Configuration 이 CGLIB이라는 바이트코드 조작 라이브러리를 사용,
+    //      AppConfig 클래스를 상속 받은 임의의 클래스를 만들고 그것을 빈으로 등록하였다.
+
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
